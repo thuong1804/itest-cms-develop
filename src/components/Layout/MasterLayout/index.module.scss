@@ -1,0 +1,25 @@
+@import "@/assets/scss/variables.scss";
+
+.master-layout {
+    min-height: 100vh;
+    .app-content {
+        margin-top: $heighAppHeader;
+        height: calc(100vh - 68px);
+        overflow-y: auto;
+        .content-wrapper {
+            min-height: calc(100vh - 104px);
+        }
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #e6e6e6;
+        }
+    }
+    .app-footer {
+        padding: 14px 50px;
+        background: #e7e7e7;
+        text-align: center;
+    }
+}

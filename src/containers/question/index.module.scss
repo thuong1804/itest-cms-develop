@@ -1,0 +1,49 @@
+.label-series {
+    img {
+        max-width: 30px;
+        height: auto;
+        margin-right: 8px;
+        margin-left: 3px;
+    }
+
+    [class="ant-select-item-option-content"] {
+        display: flex;
+        align-items: center;
+
+    }
+
+    [class~="ant-select-selection-item"] {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 20px;
+        }
+    }
+
+    &:focus-within {
+        [class~="ant-select-selection-item"] {
+            img {
+                opacity: .5;
+            }
+        }
+    }
+}
+
+.tooltip-overlay {
+    max-width: unset;
+
+    img {
+        width: 600px;
+        height: auto;
+    }
+}
+
+.question-type {
+    [class="ant-select-item-option-content"] {
+        span {
+            display: block;
+            width: 100%;
+        }
+    }
+}

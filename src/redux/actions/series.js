@@ -1,0 +1,22 @@
+import { createAction } from 'redux-actions';
+
+export const actionTypes = {
+    GET_LIST: 'series/GET_LIST',
+    GET_DETAIL: 'series/GET_DETAIL',
+    CREATE: 'series/CREATE',
+    UPDATE: 'series/UPDATE',
+    DELETE: 'series/DELETE',
+    SYNC_EDU_HOME: 'series/SYNC_EDU_HOME',
+    GET_ALL_LIST: 'series/GET_ALL_LIST',
+}
+
+export const actions = {
+    getList: createAction(actionTypes.GET_LIST),
+    getDetail: createAction(actionTypes.GET_DETAIL),
+    create: createAction(actionTypes.CREATE),
+    update: createAction(actionTypes.UPDATE),
+    delete: createAction(actionTypes.DELETE),
+    syncEduHome: createAction(actionTypes.SYNC_EDU_HOME),
+    getAllList: createAction(actionTypes.GET_ALL_LIST),
+}
+

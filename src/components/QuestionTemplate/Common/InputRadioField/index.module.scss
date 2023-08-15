@@ -1,0 +1,21 @@
+.input-radio-field {
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+
+    label{
+        margin: 0;
+    }
+
+
+    &.error {
+        border: 1px solid red;
+    }
+
+    input {
+        height: 20px;
+    }
+}

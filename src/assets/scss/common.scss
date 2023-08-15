@@ -1,0 +1,62 @@
+html {
+    font-family: 'Segoe UI';
+
+    overflow: hidden;
+    *::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    *::-webkit-scrollbar-thumb {
+        background-color: #e6e6e6;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.action-col {
+    display: flex;
+    align-items: center;
+
+    button {
+        padding: 4px 8px;
+    }
+
+    ;
+}
+
+.empty-img-col {
+    font-size: 56px;
+    color: #c1c1c1;
+}
+
+// Modify antd css
+.ant-form-item-control-input-content {
+    >.ant-input {
+        padding: 6px 12px;
+        height: 34px;
+        line-height: 34px;
+        border-radius: 4px;
+    }
+
+    .ant-select-selector {
+        // height: 34px !important;
+        display: flex;
+        align-items: center;
+    }
+}
+
+// End modify antd css
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.ant-select-loading {
+    .ant-select-selection-item {
+        display: none;
+    }
+}

@@ -1,0 +1,45 @@
+.input-placeholder {
+    position: relative;
+    height: 100%;
+
+    &.error{
+        border: 1px solid red;
+        border-radius: 4px;
+        padding: 4px 8px;
+
+        [class~="ant-form-item-explain-error"]{
+            display: none;
+        }
+    }
+
+    > div[contenteditable='true']:not(:empty) + span.placeholder,
+    > div[contenteditable='true']:focus + span.placeholder,
+    > input[data-exist='true'] + span.placeholder,
+    > input[type='text']:focus + span.placeholder {
+        display: none;
+    }
+
+    div[contenteditable='true']::-webkit-scrollbar{
+        height: 0;
+        width: 0;
+    }
+
+    span.placeholder {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: #c3c3c3;
+        pointer-events: none;
+    }
+
+    input{
+        border: none;
+        outline: none !important;
+        border-bottom: 1px solid black;
+        text-align: center;
+        letter-spacing: 0;
+        pointer-events: all;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,19 @@
+.image {
+    [class~="ant-upload-select"] {
+        width: 66px !important;
+        height: 66px !important;
+    }
+
+    [class="ant-upload-picture-card-wrapper"] {
+        min-height: unset !important;
+    }
+
+    [class="ant-upload-list-item-container"]{
+        width: 66px !important;
+        height: auto !important;
+    }
+}
+
+.error {
+    border: 1px solid red;
+}

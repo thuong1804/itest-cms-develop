@@ -1,0 +1,24 @@
+.question {
+    color: #f9cd43;
+    text-decoration: underline;
+}
+
+.example {
+    color: green;
+    text-decoration: underline;
+}
+
+.question-text {
+    margin: 0;
+
+    &.correct {
+        color: green;
+    }
+}
+
+.list-item {
+    background: #f3f4f7;
+    border-radius: 8px;
+    padding: 10px 20px;
+    margin: 10px 0 10px 0;
+}

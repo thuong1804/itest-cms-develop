@@ -1,0 +1,13 @@
+.text-editor {
+    div[class~='ql-toolbar'] {
+        border-radius: 4px 4px 0 0;
+    }
+
+    div[class~='ql-container'] {
+        border-radius: 0 0 4px 4px;
+
+        div[class~='ql-editor'] {
+            min-height: 160px;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+@import "@/assets/scss/variables.scss";
+
+.page-wrapper {
+    .header {
+        background: #fff;
+    }
+
+    .content {
+        background: #f0f2f5;
+        margin: $spacingSection;
+    }
+
+    .alert-wrapper{
+        margin: 0 $spacingSection;
+    }
+}

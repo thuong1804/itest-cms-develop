@@ -1,0 +1,30 @@
+.search-form {
+    .wrapper {
+        width: 100%;
+        // margin-left: 0;
+        // margin-right: 0;
+        margin: 0 !important;
+        .item {
+            padding: 0 !important;
+            &.last {
+                [class~="ant-form-item"] {
+                    margin-right: 0 !important;
+                }
+            }
+        }
+        .actions {
+            max-width: 100%;
+            padding: 0 !important;
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .input-number{
+            [class~="ant-input-number-handler-wrap"]{
+                display: none;
+            }
+            width: 100%;
+        }
+    }
+}

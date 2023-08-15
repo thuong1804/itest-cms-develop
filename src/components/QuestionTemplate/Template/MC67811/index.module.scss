@@ -1,0 +1,22 @@
+.upload-image-wrapper {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    [class="ant-upload-list-item-container"]{
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    [class="ant-upload-list ant-upload-list-picture-card"]{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+

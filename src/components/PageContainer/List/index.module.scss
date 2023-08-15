@@ -1,0 +1,14 @@
+.list-page {
+    padding: 16px;
+    background: #fff;
+    .action-bar {
+        margin: 16px 0;
+    }
+    .action-col {
+        display: flex;
+        align-items: center;
+        button {
+            padding: 4px 8px;
+        };
+    }
+}

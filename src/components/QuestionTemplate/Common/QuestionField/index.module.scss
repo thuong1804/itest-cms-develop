@@ -1,0 +1,54 @@
+.question-field {
+    height: 100%;
+
+    &.error {
+        border: 1px solid #ff4d4f;
+    }
+
+    svg {
+        cursor: pointer;
+    }
+
+    [class~="ant-form-item-row"] {
+        height: 100%;
+    }
+
+    [class~="ant-form-item-control-input"] {
+        height: 100%;
+    }
+
+    [class~="ant-form-item-control-input-content"] {
+        height: 100%;
+    }
+
+    .edit-able-field {
+        outline: none;
+    }
+
+    span {
+        top: 0 !important;
+        transform: initial !important;
+    }
+}
+
+.table-answer {
+    position: absolute;
+    box-shadow: 0 2px 8px #f0f1f2;
+    display: none;
+
+    &.visible {
+        display: initial;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: -14px;
+        left: var(--offset-left);
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 14px solid #52565e;
+    }
+}
