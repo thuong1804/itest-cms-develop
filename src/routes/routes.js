@@ -18,9 +18,9 @@ import SeriesSavePage from "@/containers/series/SavePage";
 import QuestionListPage from "@/containers/question/ListPage";
 import QuestionSavePage from "@/containers/question/SavePage";
 import ListPageTest from "@/containers/listtest/ListPage";
-import FormListTest from "@/containers/listtest/formList";
 import SavePageTest from "@/containers/listtest/SavePage";
 import SeriesTest from "@/containers/seriestest/seriestest"
+import SeriesFormTest from "@/containers/seriestest/SavePage"
 const routes = [
   // forbidden: {
   //     path: '/forbidden',
@@ -118,6 +118,11 @@ const routes = [
     roles: [userRoles.ADMIN],
   },
   {
+    path: paths.seriesDetailTest,
+    component: SeriesFormTest,
+    roles: [userRoles.ADMIN],
+  },
+  {
     path: paths.gradesListTest,
     component: ListPageTest,
     roles: [userRoles.ADMIN],
@@ -133,8 +138,13 @@ const routes = [
     roles: [userRoles.ADMIN],
   },
   {
-    path: paths.seriesTest,
+    path: paths.seriesListTest,
     component: SavePageTest,
+    roles: [userRoles.ADMIN],
+  },
+  {
+    path: paths.seriesDetailTest,
+    component: SeriesFormTest,
     roles: [userRoles.ADMIN],
   },
   {
