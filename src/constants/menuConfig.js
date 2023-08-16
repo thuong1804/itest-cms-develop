@@ -70,7 +70,7 @@ const navMenuConfig = [
         path: paths.seriesList,
       },
       {
-        label: "Quản lý giáo viên",
+        label: "Quản lý khối lớp test",
         path: paths.gradesListTest,
       },
     ],

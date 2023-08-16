@@ -28,7 +28,7 @@ const ListPageTest = () => {
   ];
   return (
     <ListPageContainer
-      objectName='Khối Giáo Viên'
+      objectName='Khối Lớp'
       getListAction={gradeActionsTest.getList}
       columns={columns}
       breadcrumbs={[
@@ -36,10 +36,12 @@ const ListPageTest = () => {
         { breadcrumbName: "Quản lý khối giáo viên" },
       ]}
       detailUrl={paths.gradesTestDetail}
-      createUrl={paths.gradesListTest}
+      createUrl={paths.gradesTestCreate}
       actionBar={{
         isEdit: true,
         isCreate: true,
+        isDelete: true,
+
       }}
       disablePagination={true}
     ></ListPageContainer>

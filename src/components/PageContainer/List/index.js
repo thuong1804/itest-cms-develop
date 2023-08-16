@@ -75,7 +75,7 @@ const ListPageContainer = ({
       ...filter,
     };
   }, [searchParams]);
-
+  console.log('list',)
   const prepareColumns = () => {
     if (actionBar.isEdit || actionBar.isDelete) {
       return [...columns, renderActionColumn()];
@@ -148,7 +148,7 @@ const ListPageContainer = ({
       onOk: () => {
         onDelete(id);
       },
-      onCancel() {},
+      onCancel() { },
     });
   };
 
@@ -176,9 +176,8 @@ const ListPageContainer = ({
 
   const onConfirmUpdateStatus = (id, status) => {
     confirm({
-      title: `Bạn có chắc muốn ${
-        status === commonStatus.ACTIVE ? "khóa" : "kích hoạt"
-      } ${objectName} này?`,
+      title: `Bạn có chắc muốn ${status === commonStatus.ACTIVE ? "khóa" : "kích hoạt"
+        } ${objectName} này?`,
       content: "",
       okText: "Xác nhận",
       okType: "danger",
@@ -186,7 +185,7 @@ const ListPageContainer = ({
       onOk: () => {
         onUpdateStatus(id, status);
       },
-      onCancel() {},
+      onCancel() { },
     });
   };
 
@@ -212,8 +211,7 @@ const ListPageContainer = ({
           },
           onError: (err) => {
             showErrorMessage(
-              `${
-                isActive ? "Khoá" : "Kích hoạt"
+              `${isActive ? "Khoá" : "Kích hoạt"
               } ${objectName} thất bại. Vui lòng thử lại!`
             );
           },
@@ -246,7 +244,7 @@ const ListPageContainer = ({
         if (
           searchParams.has(searchField.key) &&
           searchFormValues[searchField.key] !==
-            searchParams.get(searchField.key)
+          searchParams.get(searchField.key)
         ) {
           if (searchField.fieldType === fieldTypes.DATE) {
             searchFormValues[searchField.key] = dayjs(

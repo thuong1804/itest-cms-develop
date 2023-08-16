@@ -21,7 +21,7 @@ const SavePageTest = () => {
         <SavePageContainer
             form={FormTest}
             isCreating={!id}
-            objectName="khối lớp"
+            objectName="khối lớp test"
             listUrl={paths.gradesListTest}
             detailUrl={paths.gradesTestDetail}
             getDetailAction={gradeActionsTest.getDetail}
