@@ -9,6 +9,7 @@ import grade from "./grade";
 import series from "./series";
 import question from "./question";
 import gradetest from "./gradetest";
+import seriesTestSagsas from './seriestest'
 
 const sagas = [
     ...account,
@@ -20,6 +21,7 @@ const sagas = [
     ...series,
     ...question,
     ...gradetest,
+    ...seriesTestSagsas
 ];
 
 function* rootSaga() {

@@ -73,6 +73,10 @@ const navMenuConfig = [
         label: "Quản lý khối lớp test",
         path: paths.gradesListTest,
       },
+      {
+        label: "Quản lý chương trình test",
+        path: paths.seriesListTest,
+      },
     ],
   },
 ];

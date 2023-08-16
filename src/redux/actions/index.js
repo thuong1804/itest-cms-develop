@@ -8,4 +8,5 @@ export { actions as orderActions, actionTypes as orderActionTypes } from './orde
 export { actions as gradeActions, actionTypes as gradeActionTypes } from './grade';
 export { actions as gradeActionsTest, actionTypes as gradeActionTypesTest } from './gradetest';
 export { actions as seriesActions, actionTypes as seriesActionTypes } from './series';
+export { actions as seriesActionsTest, actionTypes as seriesActionTypesTest } from './seriestest';
 export { actions as questionActions, actionTypes as questionActionTypes } from './question';

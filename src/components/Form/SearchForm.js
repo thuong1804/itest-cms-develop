@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import classNames from 'classnames';
-import {Form, Input, Button, Select, DatePicker, Row, Col, InputNumber} from 'antd';
+import { Form, Input, Button, Select, DatePicker, Row, Col, InputNumber } from 'antd';
 import { SearchOutlined, CloseOutlined } from '@ant-design/icons';
 
 import { camelCaseToTitleCase, removeAccents } from '@/utils';
@@ -78,17 +78,17 @@ const SearchForm = ({
     }
 
     //remove dropdown selected value when invalid
-    useEffect(()=> {
+    useEffect(() => {
         searchFields.forEach(item => {
             const values = form.getFieldsValue();
             const hasNoOption = item.options?.length && item.options.findIndex(op => op.value?.toString() === values[item.key]) < 0;
 
-            if(item.fieldType === fieldTypes.SELECT){
-                if(hasNoOption)
+            if (item.fieldType === fieldTypes.SELECT) {
+                if (hasNoOption)
                     form.setFieldValue(item.key, null)
             }
         });
-    }, [form, searchFields]) 
+    }, [form, searchFields])
 
     const renderFormType = (fieldItem) => {
         if (fieldItem === undefined || fieldItem === null) {
@@ -120,7 +120,7 @@ const SearchForm = ({
                     placeholder={getPlaceHolder(fieldItem)}
                     defaultValue={fieldItem.initialValue}
                     onSelect={(value) => onSelectValue(value, fieldItem)}
-                    onChange={(e) => fieldItem.onChange(e, form)}
+                    onChange={(e) => fieldItem.onChange?.(e, form)}
                     style={{ width: '100%' }}
                     mode={fieldItem.mode}
                 >
@@ -160,7 +160,7 @@ const SearchForm = ({
                                 renderItem(option[optionValueKey], option[optionValueKey], option)
                                 :
                                 <Select.Option key={option[optionValueKey]}
-                                               label={option[optionLabelKey]}>
+                                    label={option[optionLabelKey]}>
                                     {option[optionLabelKey]}
                                 </Select.Option>
                         )
@@ -172,10 +172,10 @@ const SearchForm = ({
                 <InputNumber
                     defaultValue={fieldItem.initialValue}
                     placeholder={getPlaceHolder(fieldItem)}
-                    className={styles.inputNumber}/>
+                    className={styles.inputNumber} />
             )
         } else {
-            return (<Input defaultValue={fieldItem.initialValue} placeholder={getPlaceHolder(fieldItem)}/>)
+            return (<Input defaultValue={fieldItem.initialValue} placeholder={getPlaceHolder(fieldItem)} />)
         }
     }
 
@@ -184,7 +184,7 @@ const SearchForm = ({
             form={form}
             layout="inline"
             onFinish={onSubmit}
-            className={classNames(styles.searchForm, {[className]: !!className})}
+            className={classNames(styles.searchForm, { [className]: !!className })}
         >
             {
                 <Row gutter={[16, 16]} className={styles.wrapper}>
@@ -193,7 +193,7 @@ const SearchForm = ({
                             <Col
                                 key={fieldItem.key}
                                 span={fieldItem.gridCol || 8}
-                                className={classNames(styles.item, {[styles.last]: index === searchFields.length - 1})}
+                                className={classNames(styles.item, { [styles.last]: index === searchFields.length - 1 })}
                             >
                                 <Form.Item
                                     label={getLabelFieldItem(fieldItem)}

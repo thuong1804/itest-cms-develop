@@ -187,6 +187,43 @@ const apiConfig = {
       headers: baseHeader,
     },
   },
+  seriestest: {
+    getList: {
+      path: `${cmsApiUrl}/series`,
+      method: "GET",
+      headers: baseHeader,
+    },
+    getDetail: {
+      path: `${cmsApiUrl}/series/:id`,
+      method: "GET",
+      headers: baseHeader,
+    },
+    create: {
+      path: `${cmsApiUrl}/series`,
+      method: "POST",
+      headers: baseHeader,
+    },
+    update: {
+      path: `${cmsApiUrl}/series`,
+      method: "PUT",
+      headers: baseHeader,
+    },
+    delete: {
+      path: `${cmsApiUrl}/series/:id`,
+      method: "DELETE",
+      headers: baseHeader,
+    },
+    syncEduHome: {
+      path: `${cmsApiUrl}/series/sync`,
+      method: "POST",
+      headers: baseHeader,
+    },
+    getAllList: {
+      path: `${cmsApiUrl}/series/all`,
+      method: "GET",
+      headers: baseHeader,
+    },
+  },
   question: {
     getList: {
       path: `${cmsApiUrl}/questions`,

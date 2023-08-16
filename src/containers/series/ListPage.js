@@ -32,7 +32,7 @@ const ListPage = () => {
       onOk: () => {
         onConfirm(getList);
       },
-      onCancel() {},
+      onCancel() { },
     });
   };
 
@@ -131,7 +131,7 @@ const ListPage = () => {
             gridCol: 6,
           },
           {
-            key: "group",
+            key: "groups",
             searchPlaceholder: "Loại sách",
             fieldType: fieldTypes.SELECT,
             gridCol: 6,
